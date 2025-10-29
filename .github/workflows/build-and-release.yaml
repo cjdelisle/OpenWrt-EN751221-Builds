@@ -27,6 +27,7 @@ jobs:
           "./openwrt/bin/targets/econet/en751221/openwrt-econet-en751221-tplink_archer-vr1200v-v2-squashfs-sysupgrade.bin"
           "./openwrt/bin/targets/econet/en751221/openwrt-econet-en751221-nokia_g240g-e-squashfs-tclinux.trx"
           "./openwrt/bin/targets/econet/en751221/openwrt-econet-en751221-en751221_generic-initramfs-kernel.bin"
+          "./openwrt/bin/targets/econet/en751221/openwrt-econet-en751221-zyxel_pmg5617ga-squashfs-tclinux.trx"
         )
         ALL_EXIST=true
         for FILE in "${FILES[@]}"; do
@@ -55,5 +56,6 @@ jobs:
           ./openwrt/bin/targets/econet/en751221/openwrt-econet-en751221-tplink_archer-vr1200v-v2-squashfs-sysupgrade.bin
           ./openwrt/bin/targets/econet/en751221/openwrt-econet-en751221-nokia_g240g-e-squashfs-tclinux.trx
           ./openwrt/bin/targets/econet/en751221/openwrt-econet-en751221-en751221_generic-initramfs-kernel.bin
+          ./openwrt/bin/targets/econet/en751221/openwrt-econet-en751221-zyxel_pmg5617ga-squashfs-tclinux.trx
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
