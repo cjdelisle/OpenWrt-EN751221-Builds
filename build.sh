@@ -2,7 +2,7 @@
 
 git clone https://github.com/cjdelisle/openwrt.git
 cd openwrt || exit 1
-git checkout econet-add-nokia-g240g-e-oct6-2025
+git checkout econet-new-device-zyxel-pmg5617ga-oct28-2025
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
@@ -19,6 +19,8 @@ CONFIG_TARGET_DEVICE_econet_en751221_DEVICE_smartfiber_xp8421-b=y
 CONFIG_TARGET_DEVICE_PACKAGES_econet_en751221_DEVICE_smartfiber_xp8421-b=""
 CONFIG_TARGET_DEVICE_econet_en751221_DEVICE_tplink_archer-vr1200v-v2=y
 CONFIG_TARGET_DEVICE_PACKAGES_econet_en751221_DEVICE_tplink_archer-vr1200v-v2=""
+CONFIG_TARGET_DEVICE_econet_en751221_DEVICE_zyxel_pmg5617ga=y
+CONFIG_TARGET_DEVICE_PACKAGES_econet_en751221_DEVICE_zyxel_pmg5617ga=""
 CONFIG_TARGET_PER_DEVICE_ROOTFS=y
 CONFIG_FEED_luci=y
 CONFIG_FEED_packages=y
@@ -52,3 +54,8 @@ CONFIG_TARGET_ROOTFS_INITRAMFS=y
 make defconfig
 
 make "-j$(nproc)"
+
+# We need to do this for now because otherwise the binaries are unfindable
+cd ./bin/targets/econet/en751221
+ls | sed -n -e 's/openwrt-snapshot-\(.*\)-econet-\(.*\)/mv openwrt-snapshot-\1-econet-\2 openwrt-econet-\2/p' | sh
+
