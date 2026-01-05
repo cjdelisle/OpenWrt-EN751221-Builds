@@ -1,11 +1,15 @@
-# OpenWRT builds for EN751221 Devices
+# OpenWrt builds for EN751221 Devices
 
 This repository contains the github actions to build and release
-OpenWRT for EN751221 devices including the SmartFiber XP8421-B and
-TP-Link Archer VR1200v (v2).
+OpenWRT for EN751221 devices including:
 
-**WARNING:** This OS is *minimal*, there is support for USB but not
-Ethernet or wifi yet. You can only communicate with it using UART.
-Drivers for these devices have not yet been written.
+* SmartFiber XP8421-B
+* TP-Link Archer VR1200v (v2)
+* Nokia G-240G-E
+* Zyxel PMG5617GA
 
-LAST BUILD: OCT 15 2025
+**WARNING:** This OS is *minimal*, there is support for USB and
+Ethernet but not wifi yet. You can only communicate with it using
+UART.
+
+LAST BUILD: JAN 5 2026

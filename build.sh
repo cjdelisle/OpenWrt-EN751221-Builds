@@ -1,8 +1,10 @@
 #!/bin/sh
 
-git clone https://github.com/cjdelisle/openwrt.git
+# We're using the version with EN7528 even though it's not needed here.
+# Just to align with OpenWrt-EN7528-Builds
+git clone https://github.com/naseef/openwrt.git
 cd openwrt || exit 1
-git checkout econet-new-device-zyxel-pmg5617ga-oct28-2025
+git checkout b817fb8e070fab56267b0a1c79a1ab9af49f096f
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
@@ -29,16 +31,20 @@ CONFIG_FEED_telephony=y
 CONFIG_FEED_video=y
 CONFIG_IMAGEOPT=y
 CONFIG_PACKAGE_kmod-crypto-sha256=y
+CONFIG_PACKAGE_kmod-econet-eth=y
 CONFIG_PACKAGE_kmod-fs-ext4=y
 CONFIG_PACKAGE_kmod-fs-vfat=y
 CONFIG_PACKAGE_kmod-lib-crc16=y
 CONFIG_PACKAGE_kmod-libphy=y
 CONFIG_PACKAGE_kmod-mii=y
+CONFIG_PACKAGE_kmod-nls-base=y
 CONFIG_PACKAGE_kmod-nls-cp437=y
 CONFIG_PACKAGE_kmod-nls-iso8859-1=y
 CONFIG_PACKAGE_kmod-nls-utf8=y
 CONFIG_PACKAGE_kmod-scsi-core=y
 CONFIG_PACKAGE_kmod-tun=y
+CONFIG_PACKAGE_kmod-usb-common=y
+CONFIG_PACKAGE_kmod-usb-core=y
 CONFIG_PACKAGE_kmod-usb-net-rtl8152=y
 CONFIG_PACKAGE_kmod-usb-storage=y
 CONFIG_PACKAGE_nand-utils=y
