@@ -4,7 +4,7 @@
 # Just to align with OpenWrt-EN7528-Builds
 git clone https://github.com/naseef/openwrt.git
 cd openwrt || exit 1
-git checkout b817fb8e070fab56267b0a1c79a1ab9af49f096f
+git checkout 143f0cd1ce1f8d4deb74fd9dfcae63a1ff822c8f
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
