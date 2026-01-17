@@ -12,4 +12,4 @@ OpenWRT for EN751221 devices including:
 Ethernet but not wifi yet. You can only communicate with it using
 UART.
 
-LAST BUILD: JAN 5 2026
+LAST BUILD: JAN 17 2026

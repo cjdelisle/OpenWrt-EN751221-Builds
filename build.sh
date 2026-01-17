@@ -1,10 +1,8 @@
 #!/bin/sh
 
-# We're using the version with EN7528 even though it's not needed here.
-# Just to align with OpenWrt-EN7528-Builds
-git clone https://github.com/naseef/openwrt.git
+git clone https://github.com/cjdelisle/openwrt.git
 cd openwrt || exit 1
-git checkout 143f0cd1ce1f8d4deb74fd9dfcae63a1ff822c8f
+git checkout 450638efc6fb0762e2cfd3243827e9b62fd03b3f
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
